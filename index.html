@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGO</title>
+    <style>
+        body{
+            background-color: #000061;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+        }
+        .Lfirst{
+            position: relative;
+            width:12px;
+            height:50px;
+            background-color: white;
+            overflow: hidden;
+
+        }
+        .Lfirst::before{
+            content: "";
+            position: absolute;
+            width:300%;
+            height: 9px;
+            bottom: 2px;
+            left:-5px;
+            background-color: #000061;
+            transform: rotate(-30deg);
+        }
+        .Lsecond{
+            position: relative;
+            width:30px;
+            height:12px;
+            background-color: white;
+            top:-3px;
+        }
+        .Tfirst{
+            position: relative;
+            width:30px;
+            height:12px;
+            background-color: white;
+            left:5px;
+
+        }
+        .Tsecond{
+            position: relative;
+            width:12px;
+            height:46px;
+            left:15px;
+            background-color: white;
+            overflow: hidden;
+        }
+        .Tsecond::before{
+            content: "";
+            position: absolute;
+            width:300%;
+            height: 6px;
+            top: -4px;
+            left:-10px;
+            background-color: #000061;
+            transform: rotate(-30deg);
+        }
+        .Ifirst{
+            position: relative;
+            width:12px;
+            height:60px;
+            top:-2px;
+            left:21px;
+            background-color: white;
+            overflow: hidden;
+        }
+        .Ifirst::before{
+            content: "";
+            position: absolute;
+            width:300%;
+            height: 8px;
+            top: -5px;
+            left:-10px;
+            background-color: #000061;
+            transform: rotate(-30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="L">
+            <div class="Lfirst"></div>
+            <div class="Lsecond"></div>
+        </div>
+        <div class="T">
+            <div class="Tfirst"></div>
+            <div class="Tsecond"></div>
+        </div>
+        <div class="I">
+            <div class="Ifirst"></div>
+            <div class="Isecond"></div>
+        </div>
+    </div>
+   
+   
+</body>
+</html>
