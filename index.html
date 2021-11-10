@@ -9,17 +9,46 @@
         body{
             background-color: #000061;
         }
+        @font-face{
+            font-family: BwModelica-Regular;
+            src: url('BwModelica-Regular.woff') format('woff');
+        }
         .container{
             display: flex;
+            align-items: center;
             justify-content: center;
+            flex-direction: column;
             margin-top: 200px;
+        }
+        .container .LTI{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:120px;
+            overflow: hidden;
+            
+        }
+        .L{
+            position: relative;
+        }
+        .T{
+            position: relative;
+        }
+        .I{
+            position: relative;
         }
         .Lfirst{
             position: relative;
             width:12px;
             height:50px;
+            top: -1px;
             background-color: white;
             overflow: hidden;
+            transform: translateY(-100%);
+            animation-name: Lfirst;
+            animation-duration: 0.5s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
 
         }
         .Lfirst::before{
@@ -27,10 +56,16 @@
             position: absolute;
             width:300%;
             height: 9px;
-            bottom: 2px;
+            bottom: 1px;
             left:-5px;
             background-color: #000061;
             transform: rotate(-30deg);
+            opacity: 0;
+            animation-name: Lfirst-bef;
+            animation-duration: 0.1s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+           
         }
         .Lsecond{
             position: relative;
@@ -38,6 +73,11 @@
             height:12px;
             background-color: white;
             top:-3px;
+            transform: translateX(-180%);
+            animation-name: Lsecond;
+            animation-duration: 0.5s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
         }
         .Tfirst{
             position: relative;
@@ -45,6 +85,12 @@
             height:12px;
             background-color: white;
             left:5px;
+            transform: translateX(-300%);
+            animation-name: Tfirst;
+            animation-duration: 0.5s;
+            animation-delay: 1.5s;
+            animation-fill-mode: forwards;
+            top: -3px;
 
         }
         .Tsecond{
@@ -52,8 +98,15 @@
             width:12px;
             height:46px;
             left:15px;
+            top:-2px;
             background-color: white;
             overflow: hidden;
+            transform: translateY(-200%);
+            animation-name: Tsecond;
+            animation-duration: 0.5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+           
         }
         .Tsecond::before{
             content: "";
@@ -64,15 +117,25 @@
             left:-10px;
             background-color: #000061;
             transform: rotate(-30deg);
+            opacity: 0;
+            animation-name: Tsecond-bef;
+            animation-duration: 0.1s;
+            animation-delay: 2.5s;
+            animation-fill-mode: forwards;
         }
         .Ifirst{
             position: relative;
             width:12px;
             height:60px;
-            top:-2px;
+            top:-3px;
             left:21px;
             background-color: white;
             overflow: hidden;
+            transform: translateY(-100%);
+            animation-name: Ifirst;
+            animation-duration: 0.5s;
+            animation-delay: 2.5s;
+            animation-fill-mode: forwards;
         }
         .Ifirst::before{
             content: "";
@@ -81,25 +144,131 @@
             height: 8px;
             top: -5px;
             left:-10px;
+            opacity: 0;
             background-color: #000061;
             transform: rotate(-30deg);
+            animation-name: Ifirst-bef;
+            animation-duration: 0.1s;
+            animation-delay: 3s;
+            animation-fill-mode: forwards;
         }
+        .container .heading{
+            font-family: BwModelica-Regular;
+            color: white;
+            font-size: 20px;
+            position: relative;
+            left:10px;
+            opacity: 0;
+            animation-name: Lets-Solve;
+            animation-duration: 0.5s;
+            animation-delay: 3.5s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes Lfirst{
+            0%{
+                transform: translateY(-100%);
+            }
+            100%{
+                transform: translateY(0%);
+            }
+        }
+        @keyframes Lfirst-bef{
+            0%{
+                opacity: 0;
+            }
+            100%{
+               opacity: 1;
+            }
+        }
+        @keyframes Lsecond{
+            0%{
+                transform: translateX(-180%);
+            }
+            100%{
+                transform: translateX(0%);
+            }
+        }
+        @keyframes Lfirst-bef{
+            0%{
+                opacity: 0;
+            }
+            100%{
+               opacity: 1;
+            }
+        }
+        @keyframes Tfirst{
+            0%{
+                transform: translateX(-300%);
+            }
+            100%{
+                transform: translateX(0%);
+            }
+        }
+        @keyframes Tsecond{
+            0%{
+                transform: translateY(-100%);
+            }
+            100%{
+                transform: translateY(0%);
+            }
+        }
+        @keyframes Tsecond-bef{
+            0%{
+                opacity: 0;
+            }
+            100%{
+               opacity: 1;
+            }
+        }
+        @keyframes Ifirst{
+            0%{
+                transform: translateY(-100%);
+            }
+            100%{
+                transform: translateY(0%);
+            }
+        }
+        @keyframes Ifirst-bef{
+            0%{
+                opacity: 0;
+            }
+            100%{
+               opacity: 1;
+            }
+        }
+        @keyframes Lets-Solve{
+            0%{
+                opacity: 0;
+            }
+            100%{
+               opacity: 1;
+            }
+        }
+       
+        
+        
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="L">
-            <div class="Lfirst"></div>
-            <div class="Lsecond"></div>
+        <div class="LTI">
+            <div class="L">
+                <div class="Lfirst"></div>
+                <div class="Lsecond"></div>
+            </div>
+            <div class="T">
+                <div class="Tfirst"></div>
+                <div class="Tsecond"></div>
+            </div>
+            <div class="I">
+                <div class="Ifirst"></div>
+                <div class="Isecond"></div>
+            </div>
         </div>
-        <div class="T">
-            <div class="Tfirst"></div>
-            <div class="Tsecond"></div>
+        <div class="heading">
+            <h2>Let's Solve</h2>
         </div>
-        <div class="I">
-            <div class="Ifirst"></div>
-            <div class="Isecond"></div>
-        </div>
+        
     </div>
    
    
