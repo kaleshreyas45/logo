@@ -30,21 +30,30 @@
         }
         .L{
             position: relative;
+            top: 1px;
+            overflow: hidden;
         }
         .T{
             position: relative;
+            width: 36px;
+            left: -3px;
+            height: 60px;
+            top: 2px;
+            overflow: hidden;
         }
         .I{
             position: relative;
+            left: 11px;
+            top: 4px;
+            overflow: hidden;
         }
         .Lfirst{
             position: relative;
-            width:12px;
-            height:50px;
-            top: -1px;
+            width: 12px;
+            height: 50px;
+            top: 2px;
             background-color: white;
-            overflow: hidden;
-            transform: translateY(-100%);
+            transform: translateY(-110%);
             animation-name: Lfirst;
             animation-duration: 0.5s;
             animation-delay: 0.5s;
@@ -54,10 +63,10 @@
         .Lfirst::before{
             content: "";
             position: absolute;
-            width:300%;
+            width: 300%;
             height: 9px;
             bottom: 1px;
-            left:-5px;
+            left: -5px;
             background-color: #000061;
             transform: rotate(-30deg);
             opacity: 0;
@@ -69,10 +78,10 @@
         }
         .Lsecond{
             position: relative;
-            width:30px;
-            height:12px;
+            width: 30px;
+            height: 12px;
             background-color: white;
-            top:-3px;
+            top: 0px;
             transform: translateX(-180%);
             animation-name: Lsecond;
             animation-duration: 0.5s;
@@ -81,24 +90,23 @@
         }
         .Tfirst{
             position: relative;
-            width:30px;
-            height:12px;
+            width: 30px;
+            height: 12px;
             background-color: white;
-            left:5px;
+            left: 5px;
             transform: translateX(-300%);
             animation-name: Tfirst;
             animation-duration: 0.5s;
             animation-delay: 1.5s;
             animation-fill-mode: forwards;
-            top: -3px;
-
+            top: 0px;
         }
         .Tsecond{
             position: relative;
-            width:12px;
-            height:46px;
-            left:15px;
-            top:-2px;
+            width: 12px;
+            height: 46px;
+            left: 15px;
+            top: 1px;
             background-color: white;
             overflow: hidden;
             transform: translateY(-200%);
@@ -111,10 +119,10 @@
         .Tsecond::before{
             content: "";
             position: absolute;
-            width:300%;
-            height: 6px;
-            top: -4px;
-            left:-10px;
+            width: 300%;
+            height: 7px;
+            top: -5px;
+            left: -10px;
             background-color: #000061;
             transform: rotate(-30deg);
             opacity: 0;
@@ -125,10 +133,10 @@
         }
         .Ifirst{
             position: relative;
-            width:12px;
-            height:60px;
-            top:-3px;
-            left:21px;
+            width: 12px;
+            height: 62px;
+            top: -3px;
+            left: 0;
             background-color: white;
             overflow: hidden;
             transform: translateY(-100%);
@@ -140,10 +148,10 @@
         .Ifirst::before{
             content: "";
             position: absolute;
-            width:300%;
-            height: 8px;
+            width: 300%;
+            height: 9px;
             top: -5px;
-            left:-10px;
+            left: -10px;
             opacity: 0;
             background-color: #000061;
             transform: rotate(-30deg);
@@ -166,7 +174,7 @@
         }
         @keyframes Lfirst{
             0%{
-                transform: translateY(-100%);
+                transform: translateY(-110%);
             }
             100%{
                 transform: translateY(0%);
